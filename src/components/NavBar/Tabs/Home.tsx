@@ -1,5 +1,4 @@
 import React, { Component, useState } from 'react';
-import './Navbar.css';
 
 const Home = (): JSX.Element => {
   const [isClicked, setIsClicked] = useState(false);
