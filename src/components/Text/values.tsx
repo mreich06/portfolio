@@ -7,6 +7,12 @@ export enum FontSize {
   Body = 22,
 }
 
+export enum FontWeight {
+  Light = 'light',
+  Bold = 'bold',
+  Normal = 'normal',
+}
+
 export enum Colors {
   White = '#fff',
   Black = '#000',

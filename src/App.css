@@ -1,4 +1,4 @@
-* {
+.App {
   /* box sizing allows you to include padding and border in elements width and height  https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
   box-sizing: border-box;
   /* margin: 0; */

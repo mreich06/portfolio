@@ -17,11 +17,13 @@ import {
   FirstSectionTitle,
 } from './../../../../content/AboutMeContent';
 import { Colors } from '../../../Text/values';
+import AnimateFromLeft from '../../../Animation/Parallax/AnimateFromLeft';
+import Footer from '../../../Footer';
 
 const AboutMe = (): JSX.Element => {
   return (
     <>
-      <div className="webDevTitleContainer" style={{ height: 4000 }}>
+      <div className="webDevTitleContainer">
         <h1 className="webDevTitle">
           <div style={{ height: 750 }}>
             <AnimatePresence>
@@ -47,33 +49,35 @@ const AboutMe = (): JSX.Element => {
             </AnimatePresence>
           </div>
         </h1>
+      </div>
 
-        <div style={{ margin: 50, display: 'flex' }}>
-          <div style={{ flex: 1, color: 'white' }}>
-            <Parallax width={500} height={400} xPos={800}>
-              <Text small color={Colors.White}>
-                {FirstSectionDescription}
-              </Text>
-            </Parallax>
-          </div>
-          <div style={{ flex: 1 }}>
-            <Parallax width={500} height={400} xPos={-800}>
-              <Text lineHeight={'35px'} large color={Colors.White}>
-                {FirstSectionTitle}
-              </Text>
-            </Parallax>
-          </div>
+      <div style={{ margin: 50, display: 'flex' }}>
+        <div style={{ flex: 1, color: 'white' }}>
+          <Parallax width={500} height={400} xPos={800}>
+            <Text small color={Colors.White}>
+              {FirstSectionDescription}
+            </Text>
+          </Parallax>
         </div>
+        <div style={{ flex: 1 }}>
+          <Parallax width={500} height={400} xPos={-800}>
+            <Text lineHeight={'35px'} large color={Colors.White}>
+              {FirstSectionTitle}
+            </Text>
+          </Parallax>
+        </div>
+      </div>
+      <AnimateFromLeft width={200} height={20} xPos={-500} yPos={-400}></AnimateFromLeft>
 
-        {/* <MoveY input={[0, 300]} output={[0, 200]} xPos={-550}></MoveY>
+      {/* <MoveY input={[0, 300]} output={[0, 200]} xPos={-550}></MoveY>
         <MoveY input={[0, 300]} output={[0, -100]} xPos={150}></MoveY> */}
 
-        <h1>
-          {
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-          }
-        </h1>
-      </div>
+      <h1>
+        {
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        }
+      </h1>
+      <Footer />
     </>
   );
 };
