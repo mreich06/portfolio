@@ -1,0 +1,20 @@
+.box {
+  width: 150px;
+  height: 150px;
+  border-radius: 1em;
+  background-color: #f9f07e;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parallax {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parallax_background {
+  background-color: #fff;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
