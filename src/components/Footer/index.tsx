@@ -4,19 +4,11 @@ import { useViewportScroll, motion, useTransform, useMotionValue, MotionStyle, A
 import './styles.css';
 import Text from './../Text';
 import { FooterTitle, FooterDescription } from '../../content/Footer';
-
-interface AnimateFromLeftProps {
-  children?: React.ReactNode;
-  width: number;
-  height: number;
-  xPos: number;
-  yPos: number;
-  style?: MotionStyle;
-}
+import Parallax from '../Animation/Parallax';
+import ContactIcons from './ContactIcons';
 
 const Footer = (): JSX.Element => {
   const [ref, inView] = useInView({
-    /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
@@ -28,14 +20,20 @@ const Footer = (): JSX.Element => {
     <>
       <div className="footer-container">
         <div className="footer">
-          <Text large bold textAlign={'center'}>
-            {FooterTitle}
-          </Text>
-          <Text small textAlign={'center'}>
-            {FooterDescription}
-          </Text>
+          <Parallax width={500} height={50} xPos={0}>
+            <Text large bold textAlign={'center'}>
+              {FooterTitle}
+            </Text>
+          </Parallax>
+          <Parallax width={800} height={100} xPos={0}>
+            <Text small textAlign={'center'}>
+              {FooterDescription}
+            </Text>
+          </Parallax>
+          <ContactIcons />
         </div>
       </div>
+
       {/* 
   
       <AnimatePresence>

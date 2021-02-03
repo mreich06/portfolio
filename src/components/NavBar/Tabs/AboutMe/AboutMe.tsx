@@ -51,17 +51,17 @@ const AboutMe = (): JSX.Element => {
         </h1>
       </div>
 
-      <div style={{ margin: 50, display: 'flex' }}>
+      <div style={{ padding: 50, display: 'flex' }}>
         <div style={{ flex: 1, color: 'white' }}>
           <Parallax width={500} height={400} xPos={800}>
-            <Text small color={Colors.White}>
+            <Text small color={Colors.White} textAlign={'left'}>
               {FirstSectionDescription}
             </Text>
           </Parallax>
         </div>
         <div style={{ flex: 1 }}>
           <Parallax width={500} height={400} xPos={-800}>
-            <Text lineHeight={'35px'} large color={Colors.White}>
+            <Text lineHeight={'35px'} large color={Colors.White} textAlign={'left'}>
               {FirstSectionTitle}
             </Text>
           </Parallax>

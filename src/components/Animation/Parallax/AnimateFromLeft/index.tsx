@@ -1,7 +1,8 @@
 import React, { Component, useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useViewportScroll, motion, useTransform, useMotionValue, MotionStyle } from 'framer-motion';
-import './styles.css';
+import './styles.ts';
+import { Box } from './styles';
 
 interface AnimateFromLeftProps {
   children?: React.ReactNode;
@@ -14,7 +15,6 @@ interface AnimateFromLeftProps {
 
 const AnimateFromLeft = ({ children, width, height, xPos, yPos, style }: AnimateFromLeftProps): JSX.Element => {
   const [ref, inView] = useInView({
-    /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
@@ -46,7 +46,7 @@ const AnimateFromLeft = ({ children, width, height, xPos, yPos, style }: Animate
   };
   return (
     <>
-      <motion.div
+      <Box
         // initial={{ x: -1500 }}
         animate={inView ? 'visible' : 'hidden'}
         variants={variants}
@@ -56,7 +56,7 @@ const AnimateFromLeft = ({ children, width, height, xPos, yPos, style }: Animate
         className="box"
       >
         {children}
-      </motion.div>
+      </Box>
     </>
   );
 };

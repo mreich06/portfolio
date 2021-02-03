@@ -10,7 +10,7 @@ interface ParallaxProps {
   xPos: number;
 }
 
-const MoveDown = ({ children, input, output, xPos }: ParallaxProps): JSX.Element => {
+const MoveY = ({ children, input, output, xPos }: ParallaxProps): JSX.Element => {
   const { scrollY } = useViewportScroll();
   const transformY = useTransform(scrollY, input, output);
 
@@ -21,4 +21,4 @@ const MoveDown = ({ children, input, output, xPos }: ParallaxProps): JSX.Element
   );
 };
 
-export default MoveDown;
+export default MoveY;

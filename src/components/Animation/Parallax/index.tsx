@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React from 'react';
 import './styles.css';
 import { useInView } from 'react-intersection-observer';
 import { useViewportScroll, motion, useTransform, useMotionValue, MotionStyle } from 'framer-motion';
@@ -13,7 +13,6 @@ interface ParallaxProps {
 
 const Parallax = ({ children, width, height, xPos, style }: ParallaxProps): JSX.Element => {
   const [ref, inView] = useInView({
-    /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
@@ -32,7 +31,7 @@ const Parallax = ({ children, width, height, xPos, style }: ParallaxProps): JSX.
       <motion.div
         animate={inView ? 'visible' : 'hidden'}
         variants={variants}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
         ref={ref}
         style={{ ...style, x: xPos, width, height }}
         className="parallax"
