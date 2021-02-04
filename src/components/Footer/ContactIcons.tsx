@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { IconSymbols, IconType } from './Icons';
+import { IconMargin, IconMotionList } from './styles';
 
 const ContactIcons = (): JSX.Element => {
   const [ref, inView] = useInView({
@@ -26,28 +27,15 @@ const ContactIcons = (): JSX.Element => {
   };
 
   return (
-    <motion.ol
-      animate={inView ? 'visible' : 'hidden'}
-      variants={container}
-      style={{
-        alignContent: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        listStyleType: 'none',
-        display: 'flex',
-      }}
-      ref={ref}
-    >
+    <IconMotionList animate={inView ? 'visible' : 'hidden'} variants={container} ref={ref}>
       {IconSymbols.map((icon: IconType, index: number) => (
         <motion.li variants={item} key={index}>
-          <div style={{ marginRight: 70 }}>
-            <div style={{ flex: 1 }}>
-              <i className={icon.name} style={{ color: icon.color }} />
-            </div>
-          </div>
+          <IconMargin>
+            <i className={icon.name} style={{ color: icon.color }} />
+          </IconMargin>
         </motion.li>
       ))}
-    </motion.ol>
+    </IconMotionList>
   );
 };
 

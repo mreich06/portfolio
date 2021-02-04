@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Display } from './styles';
+import { styles } from '../NavBar/Tabs/AboutMe/styles';
 
 export interface AnimatedTextProps {
   section: string;
   animationIndex: number;
   style?: any;
+  marginStyle?: any;
   delayMultiple?: number;
-  title: boolean;
 }
 
 // create prop for size of text and style (margin)
@@ -17,32 +17,32 @@ const AnimatedText = ({
   section,
   animationIndex,
   style,
+  marginStyle,
   delayMultiple = 0.2,
-  title = false,
 }: AnimatedTextProps): JSX.Element => {
   let words = section.split(' ');
 
   return (
-    <div>
+    <div style={marginStyle}>
       {words.map((word: string, i: number) => (
-        // <Display title key={word + i}>
-        <motion.div
-          initial={{ y: '100%' }}
-          animate="visible"
-          variants={{
-            visible: (i: number) => ({
-              y: 0,
-              transition: {
-                delay: animationIndex + i * delayMultiple,
-              },
-            }),
-          }}
-          style={{ display: 'inline-block', willChange: 'transform' }}
-          custom={i}
-        >
-          {word + (i !== words.length - 1 ? '\u00A0' : '')}
-        </motion.div>
-        // </Display>
+        <div key={word + i} style={{ ...styles.display, ...style }}>
+          <motion.div
+            initial={{ y: '100%' }}
+            animate="visible"
+            variants={{
+              visible: (i: number) => ({
+                y: 0,
+                transition: {
+                  delay: animationIndex + i * delayMultiple,
+                },
+              }),
+            }}
+            style={{ display: 'inline-block', willChange: 'transform' }}
+            custom={i}
+          >
+            {word + (i !== words.length - 1 ? '\u00A0' : '')}
+          </motion.div>
+        </div>
       ))}
     </div>
   );

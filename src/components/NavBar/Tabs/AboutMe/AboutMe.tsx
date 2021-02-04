@@ -29,12 +29,22 @@ const AboutMe = (): JSX.Element => {
             <AnimatePresence>
               {/* animates the opacity of the text */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <AnimatedText section={WebDevTitle} title animationIndex={1} />
-                <AnimatedText section={WebDevDescription} title={false} animationIndex={2} delayMultiple={0.07} />
-                <Margin>
-                  <AnimatedText section={DigitalArtTitle} title animationIndex={3} />
-                  <AnimatedText section={DigitalArtDescription} title={false} animationIndex={4} delayMultiple={0.07} />
-                </Margin>
+                <AnimatedText section={WebDevTitle} style={styles.titleStyle} animationIndex={1} />
+                <AnimatedText
+                  section={WebDevDescription}
+                  style={styles.descriptionStyle}
+                  animationIndex={2}
+                  delayMultiple={0.07}
+                />
+                <div className="margin">
+                  <AnimatedText section={DigitalArtTitle} style={styles.titleStyle} animationIndex={3} />
+                  <AnimatedText
+                    section={DigitalArtDescription}
+                    style={styles.descriptionStyle}
+                    animationIndex={4}
+                    delayMultiple={0.07}
+                  />
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>

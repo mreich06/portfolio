@@ -30,3 +30,15 @@ export const Icons = styled.div`
 export const Icon = styled.div`
   display: flex;
 `;
+
+export const IconMargin = styled.div`
+  margin: 70;
+  flex: 1;
+`;
+
+export const IconMotionList = styled(motion.ol)`
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  display: flex;
+`;
