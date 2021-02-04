@@ -1,14 +1,13 @@
 import React, { Component, useState } from 'react';
-import { MenuItems } from './MenuItems';
 import { Button } from '../Button';
-import './Navbar.css';
+import './NavBar.css';
 import { Link } from 'react-router-dom';
 import { Data } from './../Data';
 import { motion } from 'framer-motion';
 
 // onClick to ul to show sidebar or not, t or f
 
-const Navbar = (): JSX.Element => {
+const NavBar = (): JSX.Element => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = (): void => {
@@ -57,10 +56,6 @@ const itemVariants = {
 const AnimatedNavItems = (): JSX.Element => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClick = (): void => {
-    console.log('clicked');
-    setIsClicked(!isClicked);
-  };
   return (
     <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>
       {Data.map((item, index) => {
@@ -78,4 +73,4 @@ const AnimatedNavItems = (): JSX.Element => {
   );
 };
 
-export default Navbar;
+export default NavBar;

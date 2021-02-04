@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { styles } from '../Navbar/Tabs/AboutMe/styles';
 import { Display } from './styles';
 
 export interface AnimatedTextProps {
