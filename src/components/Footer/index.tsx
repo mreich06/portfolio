@@ -1,11 +1,12 @@
 import React, { Component, useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useViewportScroll, motion, useTransform, useMotionValue, MotionStyle, AnimatePresence } from 'framer-motion';
-import './styles.css';
+import './styles.ts';
 import Text from './../Text';
 import { FooterTitle, FooterDescription } from '../../content/Footer';
 import Parallax from '../Animation/Parallax';
 import ContactIcons from './ContactIcons';
+import { FooterContainer, FooterContent } from './styles';
 
 const Footer = (): JSX.Element => {
   const [ref, inView] = useInView({
@@ -18,8 +19,8 @@ const Footer = (): JSX.Element => {
   };
   return (
     <>
-      <div className="footer-container">
-        <div className="footer">
+      <FooterContainer>
+        <FooterContent>
           <Parallax width={500} height={50} xPos={0}>
             <Text large bold textAlign={'center'}>
               {FooterTitle}
@@ -31,8 +32,8 @@ const Footer = (): JSX.Element => {
             </Text>
           </Parallax>
           <ContactIcons />
-        </div>
-      </div>
+        </FooterContent>
+      </FooterContainer>
 
       {/* 
   

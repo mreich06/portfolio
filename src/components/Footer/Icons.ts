@@ -3,7 +3,7 @@ export type IconType = {
   color: string;
 };
 
-export const Icons: IconType[] = [
+export const IconSymbols: IconType[] = [
   { name: 'fab fa-facebook fa-3x', color: '#4267b2' },
   { name: 'fab fa-instagram fa-3x', color: '#3f729b' },
   { name: 'far fa-envelope fa-3x', color: '#fff' },

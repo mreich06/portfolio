@@ -1,9 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import './styles.css';
-import { Icons, IconType } from './Icons';
-import { styles } from './newStyles';
+import { Icons } from './styles';
+import { IconSymbols, IconType } from './Icons';
+import { MotionList, styles } from '../Navbar/Tabs/AboutMe/styles';
 
 const ContactIcons = (): JSX.Element => {
   const [ref, inView] = useInView({
@@ -29,9 +29,9 @@ const ContactIcons = (): JSX.Element => {
 
   return (
     <>
-      <div className="icons" style={styles.container}>
-        <motion.ol animate={inView ? 'visible' : 'hidden'} variants={container} style={styles.motionList} ref={ref}>
-          {Icons.map((icon: IconType, index: number) => (
+      <Icons>
+        <MotionList animate={inView ? 'visible' : 'hidden'} variants={container} ref={ref}>
+          {IconSymbols.map((icon: IconType, index: number) => (
             <motion.li variants={item} key={index}>
               <div style={{ marginRight: 70 }}>
                 <div style={{ flex: 1 }}>
@@ -40,8 +40,8 @@ const ContactIcons = (): JSX.Element => {
               </div>
             </motion.li>
           ))}
-        </motion.ol>
-      </div>
+        </MotionList>
+      </Icons>
     </>
   );
 };

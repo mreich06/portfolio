@@ -4,7 +4,7 @@ import AnimateUpText from '../../../Text/AnimateUpText';
 import './AboutMe.css';
 import AnimatedAboutMeText from '../../../Text/AnimateUpText';
 import AnimatedText from '../../../Text/AnimatedText';
-import { styles } from './styles';
+import { Intro, IntroContainer, Margin, styles } from './styles';
 import Parallax from '../../../Animation/Parallax';
 import MoveY from '../../../Animation/Parallax/MoveY';
 import Text from '../../../../components/Text';
@@ -23,33 +23,23 @@ import Footer from '../../../Footer';
 const AboutMe = (): JSX.Element => {
   return (
     <>
-      <div className="webDevTitleContainer">
-        <h1 className="webDevTitle">
+      <IntroContainer>
+        <Intro>
           <div style={{ height: 750 }}>
             <AnimatePresence>
               {/* animates the opacity of the text */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <AnimatedText section={WebDevTitle} style={styles.titleStyle} animationIndex={1} />
-                <AnimatedText
-                  section={WebDevDescription}
-                  style={styles.descriptionStyle}
-                  animationIndex={2}
-                  delayMultiple={0.07}
-                />
-                <div className="margin">
-                  <AnimatedText section={DigitalArtTitle} style={styles.titleStyle} animationIndex={3} />
-                  <AnimatedText
-                    section={DigitalArtDescription}
-                    style={styles.descriptionStyle}
-                    animationIndex={4}
-                    delayMultiple={0.07}
-                  />
-                </div>
+                <AnimatedText section={WebDevTitle} title animationIndex={1} />
+                <AnimatedText section={WebDevDescription} title={false} animationIndex={2} delayMultiple={0.07} />
+                <Margin>
+                  <AnimatedText section={DigitalArtTitle} title animationIndex={3} />
+                  <AnimatedText section={DigitalArtDescription} title={false} animationIndex={4} delayMultiple={0.07} />
+                </Margin>
               </motion.div>
             </AnimatePresence>
           </div>
-        </h1>
-      </div>
+        </Intro>
+      </IntroContainer>
 
       <div style={{ padding: 50, display: 'flex' }}>
         <div style={{ flex: 1, color: 'white' }}>
