@@ -74,7 +74,9 @@ const AboutMe = (): JSX.Element => {
       <div style={{ height: 800 }}>
         <AllToRight />
         <FromRight />
-        <Skills />
+        <Parallax width={1000} height={1000} xPos={0}>
+          <Skills />
+        </Parallax>
 
         {/* <DigitalArtPanel />
 
