@@ -11,7 +11,7 @@ export const FooterContent = styled.div`
   align-items: center;
   justify-content: center;
   align-self: center;
-  background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+  background: #02054a;
   height: 400px;
   position: absolute;
   left: 0;

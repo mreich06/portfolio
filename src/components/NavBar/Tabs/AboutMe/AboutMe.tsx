@@ -21,15 +21,16 @@ import AnimateFromLeft from '../../../Animation/Parallax/AnimateFromLeft';
 import Footer from '../../../Footer';
 import SectionBorder from '../../../Animation/SectionBorder/FromLeftAndRight';
 import FromLeftAndRight from '../../../Animation/SectionBorder/FromLeftAndRight';
-import FromRight from '../../../Animation/SectionBorder/FromRight';
+import FromRight, { AllToRight } from '../../../Animation/SectionBorder/FromRight';
 import Skills from './components/Skills';
+import DigitalArtPanel from './components/DigitalArtPanel';
 
 const AboutMe = (): JSX.Element => {
   return (
     <>
       <IntroContainer>
         <Intro>
-          <div style={{ height: 750 }}>
+          <div style={{ height: 500 }}>
             <AnimatePresence>
               {/* animates the opacity of the text */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -54,29 +55,32 @@ const AboutMe = (): JSX.Element => {
           </div>
         </Intro>
       </IntroContainer>
-
       <div style={{ padding: 50, display: 'flex' }}>
         <div style={{ flex: 1, color: 'white' }}>
-          <Parallax width={500} height={400} xPos={800}>
-            <Text small color={Colors.White} textAlign={'left'}>
+          <Parallax width={500} height={400} xPos={700}>
+            <Text small color={Colors.White} textAlign={'right'}>
               {FirstSectionDescription}
             </Text>
           </Parallax>
         </div>
         <div style={{ flex: 1 }}>
-          <Parallax width={500} height={400} xPos={-800}>
+          <Parallax width={500} height={400} xPos={-700}>
             <Text lineHeight={'35px'} large color={Colors.White} textAlign={'left'} style={{ marginRight: 80 }}>
               {FirstSectionTitle}
             </Text>
           </Parallax>
         </div>
       </div>
+      <div style={{ height: 800 }}>
+        <AllToRight />
+        <FromRight />
+        <Skills />
 
-      <FromRight />
-      <Skills />
+        {/* <DigitalArtPanel />
 
-      {/* <MoveY input={[0, 300]} output={[0, 200]} xPos={-550}></MoveY>
-        <MoveY input={[0, 300]} output={[0, -100]} xPos={150}></MoveY> */}
+        <DigitalArtPanel />
+        <DigitalArtPanel /> */}
+      </div>
 
       <Footer />
     </>

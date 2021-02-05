@@ -3,5 +3,6 @@ import styled from 'styled-components';
 export const FlexContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20;
+  grid-column-gap: 100px;
+  margin: 300px;
 `;

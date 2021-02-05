@@ -34,22 +34,6 @@ const Footer = (): JSX.Element => {
           <ContactIcons />
         </FooterContent>
       </FooterContainer>
-
-      {/* 
-  
-      <AnimatePresence>
-        <motion.div
-          initial={{ y: -100 }}
-          animate={inView ? 'visible' : 'hidden'}
-          variants={variants}
-          transition={{ duration: 1, ease: 'easeIn' }}
-          ref={ref}
-          style={{ ...style, x: xPos, y: yPos, width, height }}
-          className="box"
-        >
-          {children}
-        </motion.div>
-      </AnimatePresence> */}
     </>
   );
 };
