@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { IconSymbols, IconType } from './Icons';
 import { IconMargin, IconMotionList } from './styles';
+import { handleExternalNavigation } from '../../utils';
 
 const ContactIcons = (): JSX.Element => {
   const [ref, inView] = useInView({
@@ -31,7 +32,11 @@ const ContactIcons = (): JSX.Element => {
       {IconSymbols.map((icon: IconType, index: number) => (
         <motion.li variants={item} key={index}>
           <IconMargin>
-            <i className={icon.name} style={{ color: icon.color }} />
+            <i
+              className={icon.name}
+              style={{ color: icon.color }}
+              onClick={(): void => handleExternalNavigation(icon.url)}
+            />
           </IconMargin>
         </motion.li>
       ))}

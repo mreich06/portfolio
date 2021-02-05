@@ -1,6 +1,7 @@
 import { FontSize, FontWeight } from './values';
 
 export const getFontSize = (
+  tiny: boolean,
   small: boolean,
   medium: boolean,
   large: boolean,
@@ -8,6 +9,8 @@ export const getFontSize = (
   body: boolean,
 ): FontSize => {
   switch (true) {
+    case tiny:
+      return FontSize.Tiny;
     case small:
       return FontSize.Small;
     case medium:

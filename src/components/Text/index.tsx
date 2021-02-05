@@ -7,6 +7,7 @@ interface TextProps {
   style?: any; // change
   body?: boolean;
   small?: boolean;
+  tiny?: boolean;
   medium?: boolean;
   large?: boolean;
   light?: boolean;
@@ -22,6 +23,7 @@ const Text = ({
   style,
   body = false,
   small = false,
+  tiny = false,
   medium = false,
   large = false,
   light = false,
@@ -32,7 +34,7 @@ const Text = ({
   textAlign = 'center',
 }: TextProps): JSX.Element => {
   const element = React.createElement('h1', { className: 'greeting' }, 'Hi');
-  const fontSize: number = getFontSize(small, medium, large, link, body);
+  const fontSize: number = getFontSize(tiny, small, medium, large, link, body);
   const fontWeight: any = getFontWeight(light, bold);
   return (
     <div style={style} className="text-container">

@@ -32,13 +32,14 @@ export const Icon = styled.div`
 `;
 
 export const IconMargin = styled.div`
-  margin: 70;
+  margin: 70px;
   flex: 1;
 `;
 
 export const IconMotionList = styled(motion.ol)`
   align-items: center;
   justify-content: center;
+  align-content: center;
   list-style-type: none;
   display: flex;
 `;

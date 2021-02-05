@@ -1,5 +1,6 @@
 export enum FontSize {
   Caption = 20,
+  Tiny = 15,
   Small = 20,
   Medium = 25,
   Large = 40,

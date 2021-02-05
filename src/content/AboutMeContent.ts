@@ -15,3 +15,6 @@ export const FirstSectionDescription = `I am a full stack developer with 6 years
 My passion for web development and design developed from my natural inclination towards design and art.
 As a traditional and digital artist, I aim to use my creative perspective to guide me in creating beautiful
 and user friendly websites.`;
+
+export const FirstSectionSecondParagraph = `I am interested in all types of digital design but I focus primarily on web design & development, 
+ branding and digital art. As a full stack developer in my current job, I have experience with back end development and database management`;
