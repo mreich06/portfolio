@@ -1,10 +1,10 @@
 import React, { Component, useState } from 'react';
-import Text from './../../Text';
+import Text from './../components/Text';
 import TextField from '@material-ui/core/TextField';
 import { rgbToHex } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { motion } from 'framer-motion';
-import { CenterItems } from '../../../utils/styles';
+import { CenterItems } from '../utils/styles';
 
 const Contact = (): JSX.Element => {
   const useStyles = makeStyles((theme: any) => ({
@@ -19,30 +19,56 @@ const Contact = (): JSX.Element => {
   const classes = useStyles();
 
   const variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { y: 1000 },
+    visible: {
       y: 0,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5,
-        ease: 'easeOut',
-        duration: 1.5,
+        type: 'tween',
+      },
+    },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  const textChildVariants = {
+    hidden: { y: -1000 },
+    visible: {
+      y: 0,
+      transition: {
+        type: 'tween',
       },
     },
   };
   return (
     <div style={{ minHeight: 1000, paddingTop: 150 }}>
       <CenterItems>
-        <motion.div variants={variants} initial="hidden" animate="visible">
-          <motion.div variants={variants}>
+        <motion.div variants={textVariants} initial="hidden" animate="visible">
+          <motion.div variants={textChildVariants}>
             <Text large>{`Let's chat!`}</Text>
             <Text small>{`Drop me a line if you have any questions or want to work together.`}</Text>
           </motion.div>
         </motion.div>
 
         <motion.div variants={variants} initial="hidden" animate="visible">
-          <motion.div variants={variants}>
+          <motion.div variants={childVariants}>
             <div style={{ marginTop: 30 }}>
               <TextField
                 id="filled-basic"
@@ -54,7 +80,7 @@ const Contact = (): JSX.Element => {
               />
             </div>
           </motion.div>
-          <motion.div variants={variants}>
+          <motion.div variants={childVariants}>
             <div style={{ marginTop: 10 }}>
               <TextField
                 id="filled-basic"
@@ -66,7 +92,7 @@ const Contact = (): JSX.Element => {
               />
             </div>
           </motion.div>
-          <motion.div variants={variants}>
+          <motion.div variants={childVariants}>
             <div style={{ marginTop: 10 }}>
               <TextField
                 id="outlined-multiline-static"

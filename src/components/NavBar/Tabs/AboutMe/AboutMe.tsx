@@ -71,6 +71,7 @@ const AboutMe = (): JSX.Element => {
           </Parallax>
         </div>
       </div>
+
       <div style={{ height: 800 }}>
         <AllToRight />
         <FromRight />

@@ -14,7 +14,6 @@ interface AnimateFromLeftProps {
 
 const Test = ({ children, width, height, xPos, yPos, style }: AnimateFromLeftProps): JSX.Element => {
   const [ref, inView] = useInView({
-    /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
