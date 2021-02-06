@@ -20,9 +20,4 @@ export const Data = [
     path: '/contact',
     cName: 'nav-text',
   },
-  {
-    title: 'Click Here',
-    path: '/signup',
-    cName: 'nav-text',
-  },
 ];

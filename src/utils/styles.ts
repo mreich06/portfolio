@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const CenterItems = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
   flex-direction: column;
 `;
