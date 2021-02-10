@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, Props, useState } from 'react';
 import Text from './../../Text';
 import TextField from '@material-ui/core/TextField';
 import { rgbToHex } from '@material-ui/core';
@@ -42,9 +42,14 @@ export const Border = styled(motion.div)`
   border-radius: 20px;
   /* flex: 1; */
 `;
-export const Shadow = styled.div`
-  width: 362px;
-  height: 512px;
+
+interface ShadowProps {
+  width: string;
+  height: string;
+}
+export const Shadow = styled.div<ShadowProps>`
+  width: ${props => props.width};
+  height: ${props => props.height};
   background: black;
   border-radius: 20;
   box-shadow: 0px 0px 30px 12px #000;
@@ -53,6 +58,32 @@ export const Shadow = styled.div`
   justify-content: 'center';
   align-content: 'center';
 `;
+
+interface ImageMotionProps {
+  hoverVariantImage: any;
+  src: any;
+  height: number;
+  width: number;
+  shadowWidth: string;
+  shadowHeight: string;
+}
+
+const ImageMotion = ({
+  hoverVariantImage,
+  src,
+  height,
+  width,
+  shadowWidth,
+  shadowHeight,
+}: ImageMotionProps): JSX.Element => {
+  return (
+    <motion.div variants={hoverVariantImage} style={{ flex: 1 }}>
+      <Shadow width={shadowWidth} height={shadowHeight}>
+        <img src={src} height={height} width={width} style={{ borderRadius: 10, flex: 1 }} />
+      </Shadow>
+    </motion.div>
+  );
+};
 
 const Portfolio = (): JSX.Element => {
   const [ref, inView] = useInView({
@@ -65,7 +96,7 @@ const Portfolio = (): JSX.Element => {
   });
 
   const variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0.2, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -129,11 +160,14 @@ const Portfolio = (): JSX.Element => {
             >
               <motion.div variants={variants}>
                 <div style={{ display: 'flex', padding: 70 }}>
-                  <motion.div variants={hoverVariantImage} style={{ flex: 1 }}>
-                    <Shadow>
-                      <img src={EmmaWatson} height={512} width={362} style={{ borderRadius: 10, flex: 1 }} />
-                    </Shadow>
-                  </motion.div>
+                  <ImageMotion
+                    src={EmmaWatson}
+                    height={512}
+                    width={362}
+                    shadowWidth={'362px'}
+                    shadowHeight={'512px'}
+                    hoverVariantImage={hoverVariantImage}
+                  />
                   <motion.div variants={hoverVariantText} style={{ flex: 1 }}>
                     <PortfolioItemSection title={ItemOneTitle} date={ItemOneDate} description={ItemOneDescription} />
                     <Border variants={hoverVariantUnderline} />
@@ -146,24 +180,67 @@ const Portfolio = (): JSX.Element => {
         </motion.div>
 
         <motion.div variants={variants} ref={ref} animate={inView ? 'visible' : 'hidden'}>
-          <div style={{ display: 'flex', padding: 70 }}>
-            <div style={{ flex: 1 }}></div>
+          <motion.div initial="notHover" whileHover="hover" animate="notHover">
+            <div style={{ position: 'relative', width: '100%', top: -600 }}>
+              <motion.div variants={svgVariants} style={{ x: 1500 }}>
+                <img height={1200} width={700} src={HalfTone} style={{ transform: `rotate(90deg)` }} />
+              </motion.div>
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 300,
+                  left: -100,
+                  width: '100%',
+                }}
+              >
+                <motion.div variants={variants}>
+                  <div style={{ display: 'flex', padding: 70 }}>
+                    <div style={{ flex: 1 }}></div>
+                    <motion.div variants={hoverVariantText} style={{ flex: 1 }}>
+                      <PortfolioItemSection title={ItemTwoTitle} date={ItemTwoDate} description={ItemOneDescription} />
+                      <Border variants={hoverVariantUnderline} />
+                    </motion.div>
 
-            <PortfolioItemSection title={ItemTwoTitle} date={ItemTwoDate} description={ItemOneDescription} />
-            <div style={{ flex: 1 }}>
-              <img src={Painting} />
+                    <ImageMotion
+                      src={Painting}
+                      height={423}
+                      width={640}
+                      shadowWidth={'680px'}
+                      shadowHeight={'440px'}
+                      hoverVariantImage={hoverVariantImage}
+                    />
+                  </div>
+                </motion.div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div variants={variants} ref={ref2} animate={inView2 ? 'visible' : 'hidden'}>
-          <div style={{ display: 'flex', padding: 70 }}>
-            <div style={{ flex: 1 }}>
-              <img src={Drawing} height={384} width={530} style={{ flex: 1 }} />
-            </div>
-            <PortfolioItemSection title={ItemThreeTitle} date={ItemThreeDate} description={ItemThreeDescription} />
-            <div style={{ flex: 1 }}></div>
-          </div>
+          <motion.div initial="notHover" whileHover="hover" animate="notHover">
+            <motion.div variants={variants}>
+              <div style={{ display: 'flex', padding: 70 }}>
+                <ImageMotion
+                  src={Drawing}
+                  height={384}
+                  width={530}
+                  shadowWidth={'362px'}
+                  shadowHeight={'512px'}
+                  hoverVariantImage={hoverVariantImage}
+                />
+                <motion.div variants={hoverVariantText} style={{ flex: 1 }}>
+                  <PortfolioItemSection
+                    title={ItemThreeTitle}
+                    date={ItemThreeDate}
+                    description={ItemThreeDescription}
+                  />
+                  <Border variants={hoverVariantUnderline} />
+                </motion.div>
+
+                <div style={{ flex: 1 }}></div>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </motion.div>
     </Container>
