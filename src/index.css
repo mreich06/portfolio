@@ -4,3 +4,20 @@ body {
 	height: 2000px;
 }
 @import 'tailwindcss';
+
+@theme {
+	--font-inter: Inter;
+	--font-monomaniac: Monomaniac;
+}
+
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	src: url('/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: Monomaniac;
+	font-style: normal;
+	src: url('/fonts/MonomaniacOne-Regular.woff') format('woff');
+}

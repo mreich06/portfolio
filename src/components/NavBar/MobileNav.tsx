@@ -10,7 +10,7 @@ interface MobileNavProps {
 const NavBarSection = ({ number, label }: NavLinkProps): JSX.Element => {
 	return (
 		<li className="flex space-x-1">
-			<span className="text-green-400 font-inter">{number}</span>
+			<span className="text-green-400 font-monomaniac">{number}</span>
 			<span className="font-inter">{label}</span>
 		</li>
 	);
@@ -22,12 +22,12 @@ const MobileNav = ({ onClose, isOpen }: MobileNavProps): JSX.Element => {
 				<div className="md:hidden flex flex-col justify-center items-center fixed top-0 left-0 w-full h-[300px] z-50">
 					<button
 						onClick={onClose}
-						className="absolute top-4 right-4 text-green-400 text-3xl"
+						className="absolute top-4 right-4 text-3xl"
 						aria-label="Close mobile menu"
 					>
 						<CloseIcon size={30} color={'#2EEBAA'} />
 					</button>
-					<ul className="space-y-6 text-2xl text-white">
+					<ul className="space-y-6 text-2xl">
 						{NavItems.map((item) => (
 							<NavBarSection number={item.number} label={item.label} />
 						))}
