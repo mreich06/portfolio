@@ -20,6 +20,12 @@ export default tseslint.config(
 		rules: {
 			...reactHooks.configs.recommended.rules,
 			'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+			'react/jsx-uses-vars': 'error',
+			'react/jsx-uses-react': 'off',
+			'@typescript-eslint/no-unused-vars': [
+				'error',
+				{ vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+			],
 		},
 	},
 );
