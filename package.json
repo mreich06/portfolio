@@ -8,7 +8,8 @@
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"test": "jest"
+		"test": "jest",
+		"convert": "node src/scripts/convert-svg-to-react.js"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.0",
