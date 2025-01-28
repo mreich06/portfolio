@@ -5,7 +5,7 @@ function App() {
 	return (
 		<div className="flex flex-col">
 			<NavBar />
-			<div className="p-40">
+			<div className="p-30">
 				<Hero />
 			</div>
 		</div>

@@ -2,11 +2,11 @@ import ProfilePic from '../../assets/photos/profile-pic.png';
 
 const MobileHero = (): JSX.Element => {
 	return (
-		<div className="flex flex-col gap-8">
+		<div className="flex flex-col gap-8 md:hidden">
 			<div className="w-full justify-center align-center">
-				<p className="text-sky-400 text-center text-lg mb-4 md:">Hi there,</p>
-				<p className="text-white text-center text-5xl mb-3">I'm Maya</p>
-				<p className="text-sky-400 text-center text-5xl">Full Stack Developer</p>
+				<p className="text-sky-400 text-center description mb-4 md:">Hi there,</p>
+				<p className="text-white text-center header mb-3">I'm Maya</p>
+				<p className="text-sky-400 text-center header">Full Stack Developer</p>
 			</div>
 			<div className="flex w-full justify-center items-center">
 				<img
@@ -16,7 +16,7 @@ const MobileHero = (): JSX.Element => {
 				/>
 			</div>
 			<div className="text-center">
-				<p className="text-gray-400 text-center text-lg inline m-0 p-0">
+				<p className="text-gray-400 text-center description inline m-0 p-0">
 					I create <span className="text-sky-400">user-focused</span> applications that
 					combine functionality with clean, modern design. I am currently living in
 					<span className="text-sky-400"> Tokyo.</span>

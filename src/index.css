@@ -21,3 +21,39 @@ body {
 	font-style: normal;
 	src: url('/fonts/MonomaniacOne-Regular.woff') format('woff');
 }
+
+@layer utilities {
+	.header {
+		@apply text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl;
+	}
+	.description {
+		@apply text-sm sm:text-sm md:text-base lg:text-xl xl:text-2xl;
+	}
+	.header-margin {
+		@apply md:mb-5 lg:mb-10 xl:mb-15;
+	}
+	.button {
+		@apply text-base sm:text-base md:text-xl lg:text-2xl xl:text-3xl;
+	}
+	.primary-button {
+		@apply bg-sky-400 flex justify-center items-center rounded-2xl text-white font-inter w-full;
+		@apply px-6 py-2 text-sm; /* Default size */
+		@apply sm:px-8 sm:py-3 sm:text-base;
+		@apply md:px-10 md:py-4 md:text-lg;
+		@apply lg:px-12 lg:py-5 lg:text-xl;
+		@apply xl:px-14 xl:py-6 xl:text-2xl;
+		@apply text-base sm:text-base md:text-xl lg:text-2xl xl:text-3xl;
+	}
+	.secondary-button {
+		@apply bg-black flex justify-center items-center rounded-2xl border-sky-400 border-2 text-white font-inter w-full;
+		@apply px-6 py-2 text-sm; /* Default size */
+		@apply sm:px-8 sm:py-3 sm:text-base;
+		@apply md:px-10 md:py-4 md:text-lg;
+		@apply lg:px-12 lg:py-5 lg:text-xl;
+		@apply xl:px-14 xl:py-6 xl:text-2xl;
+		@apply text-base sm:text-base md:text-xl lg:text-2xl xl:text-3xl;
+	}
+	.header-container {
+		@apply xl:mt-10;
+	}
+}
