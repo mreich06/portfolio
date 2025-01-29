@@ -5,11 +5,11 @@ const DesktopHero = (): JSX.Element => {
 		<div className="hidden md:flex justify-center items-center px-6 md:px-8 lg:px-12 header-container">
 			<div className="w-full max-w-[1800px] flex gap-8">
 				<div className="flex-1 flex flex-col justify-center">
-					<p className="text-sky-400 description mb-5">Hi there,</p>
+					<p className="description mb-5">Hi there,</p>
 					<p className="text-white header mb-4">I'm Maya</p>
 					<p className="text-sky-400 header header-margin">Full Stack Developer</p>
 					<div className="mb-18">
-						<p className="text-gray-400 description">
+						<p className="description">
 							I create <span className="text-sky-400">user-focused</span> applications
 							that combine functionality with clean, modern design. I am currently living
 							in
