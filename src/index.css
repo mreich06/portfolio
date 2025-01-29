@@ -28,7 +28,7 @@ body {
 	}
 	.section-text {
 		@apply text-white font-inter;
-		@apply text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+		@apply text-2xl sm:text-xl/8 md:text-2xl/10 lg:text-3xl/12 xl:text-4xl/14;
 	}
 	.description {
 		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
