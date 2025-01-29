@@ -31,11 +31,11 @@ body {
 		@apply text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
 	}
 	.description {
-		@apply text-sm sm:text-sm md:text-base lg:text-xl xl:text-2xl;
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
 		@apply text-gray-400;
 	}
 	.description-highlight {
-		@apply text-sm sm:text-sm md:text-base lg:text-xl xl:text-2xl;
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
 		@apply text-sky-400;
 	}
 	.header-margin {
