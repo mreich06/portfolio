@@ -26,8 +26,17 @@ body {
 	.header {
 		@apply text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl;
 	}
+	.section-text {
+		@apply text-white font-inter;
+		@apply text-2xl sm:text-xl/8 md:text-2xl/10 lg:text-3xl/12 xl:text-4xl/14;
+	}
 	.description {
-		@apply text-sm sm:text-sm md:text-base lg:text-xl xl:text-2xl;
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
+		@apply text-gray-400;
+	}
+	.description-highlight {
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
+		@apply text-sky-400;
 	}
 	.header-margin {
 		@apply md:mb-5 lg:mb-10 xl:mb-15;
