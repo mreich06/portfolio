@@ -18,8 +18,8 @@ const NavBarSection = ({ number, label }: NavLinkProps): JSX.Element => {
 const MobileNav = ({ onClose, isOpen }: MobileNavProps): JSX.Element => {
 	return (
 		<>
-			{!isOpen ? (
-				<div className="md:hidden flex flex-col justify-center items-center fixed top-0 left-0 w-full h-[300px] z-50">
+			{isOpen ? (
+				<div className="md:hidden flex flex-col justify-center items-center fixed top-0 left-0 w-full h-[300px] z-50 bg-black">
 					<button
 						onClick={onClose}
 						className="absolute top-4 right-4 text-3xl"
