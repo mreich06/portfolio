@@ -61,4 +61,8 @@ body {
 	.header-container {
 		@apply xl:mt-10;
 	}
+	.tools-section-header {
+		@apply text-lg xl:text-xl;
+		@apply text-white;
+	}
 }
