@@ -9,7 +9,7 @@ const MobileProjects = (): JSX.Element => {
 					The tools I've been using over the past 4 years
 				</p>
 				{TechStack.map((section) => (
-					<ToolsSection name={section.title} tools={section.tools} />
+					<ToolsSection key={section.title} name={section.title} tools={section.tools} />
 				))}
 			</div>
 		</div>

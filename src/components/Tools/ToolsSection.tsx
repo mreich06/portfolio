@@ -12,7 +12,7 @@ const ToolsSection = ({ name, tools }: ToolsSectionProps): JSX.Element => {
 				<p className="tools-section-header text-center mb-5">{name}</p>
 				<div className="flex flex-wrap gap-3 justify-center">
 					{tools.map((item) => (
-						<Badge name={item} />
+						<Badge key={item} name={item} />
 					))}
 				</div>
 			</div>
