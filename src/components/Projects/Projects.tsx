@@ -35,10 +35,10 @@ const ProjectsSection = () => {
 	return (
 		<section id="projects" className="py-20 px-4 md:mx-[100px] lg:mx-[100px]">
 			<h2 className="text-3xl font-bold text-center text-white mb-4">Projects</h2>
-			<p className="text-center text-green-400 mb-10">
+			<p className="text-center text-sky-400 mb-10">
 				The projects I have developed in my free time
 			</p>
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 				{projects.map((project) => (
 					<ProjectCard key={project.title} {...project} />
 				))}

@@ -3,7 +3,7 @@ import ProfilePic from '../../assets/photos/profile-pic.png';
 const MobileHero = (): JSX.Element => {
 	return (
 		<div className="flex flex-col gap-8 md:hidden relative px-4 pt-10">
-			<div className="absolute w-[300px] h-[300px] bg-green-400 opacity-20 blur-[100px] rounded-full z-0 top-0 left-1/2 -translate-x-1/2" />
+			<div className="absolute w-[300px] h-[300px] bg-sky-400 opacity-20 blur-[100px] rounded-full z-0 top-0 left-1/2 -translate-x-1/2" />
 			<div className="w-full justify-center align-center relative z-10">
 				<p className="text-sky-400 text-center description mb-4">Hi there,</p>
 				<p className="text-white text-center header mb-3">I'm Maya</p>

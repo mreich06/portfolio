@@ -6,7 +6,7 @@ const ContactSection = () => {
 			<h2 className="text-3xl font-bold text-center text-white mb-4">
 				Let's work together!
 			</h2>
-			<p className="text-center text-green-400 mb-10">
+			<p className="text-center text-sky-400 mb-10">
 				Feel free to reach out with any questions or opportunities
 			</p>
 			<form className="max-w-xl mx-auto space-y-4">

@@ -10,21 +10,21 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps) => {
 	return (
-		<div className="rounded-xl overflow-hidden border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2 hover:scale-[1.02] transition-all">
-			<img src={image} alt={title} className="w-full h-40 object-cover" />
-			<div className="p-5 space-y-2">
-				<h3 className="text-lg font-semibold text-white">{title}</h3>
+		<div className="p-6 rounded-xl overflow-hidden border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2 hover:scale-[1.02] transition-all">
+			<img src={image} alt={title} className="w-full h-70 object-cover rounded-xl" />
+			<div className="p-5 space-y-5">
+				<h3 className="text-2xl font-semibold text-white">{title}</h3>
 				<div className="flex flex-wrap gap-2 mt-3">
 					{tags.map((tag) => (
 						<span
 							key={tag}
-							className="text-xs text-teal-300 bg-white/10 px-2 py-1 rounded"
+							className="text-sm text-teal-300 bg-white/10 px-2 py-1 rounded"
 						>
 							{tag}
 						</span>
 					))}
 				</div>
-				<p className="text-sm text-gray-300">{description}</p>
+				<p className="text-md text-gray-300">{description}</p>
 
 				<div className="flex justify-start gap-4 mt-5">
 					<a

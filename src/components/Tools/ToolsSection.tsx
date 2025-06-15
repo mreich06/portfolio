@@ -7,9 +7,9 @@ interface ToolsSectionProps {
 
 const ToolsSection = ({ name, tools }: ToolsSectionProps): JSX.Element => {
 	return (
-		<div className="flex-1 w-full mt-3 border-1 border-sky-400 rounded-xl min-h-70 p-2">
+		<div className="bg-[#111b1b] border border-sky-400 rounded-[25px] p-6">
 			<div className="p-2">
-				<p className="tools-section-header text-center mb-5">{name}</p>
+				<p className="tools-section-header text-center mb-5 text-white">{name}</p>
 				<div className="flex flex-wrap gap-3 justify-center">
 					{tools.map((item) => (
 						<Badge key={item} name={item} />

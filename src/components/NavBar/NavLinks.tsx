@@ -5,7 +5,7 @@ interface NavLinkProps {
 const NavLink = ({ number, label }: NavLinkProps): JSX.Element => {
 	return (
 		<a href={`${label.toLowerCase()}`} className="flex items-center space-x-2 group">
-			<span className="text-green-400 font-mono">{number}</span>
+			<span className="text-sky-400 font-mono">{number}</span>
 			<span className="text-white">{label}</span>
 		</a>
 	);
