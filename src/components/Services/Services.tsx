@@ -24,7 +24,10 @@ const projects = [
 
 const Services = (): JSX.Element => {
 	return (
-		<div className="md:flex flex-col items-center p-10 max-w-[1200px] mx-auto mb-30">
+		<section
+			id="my-services"
+			className="md:flex flex-col items-center p-10 max-w-[1200px] mx-auto mb-30"
+		>
 			<div className="w-full text-center max-w-[600px] mb-10">
 				<h1 className="section-text mt-17">My Services</h1>
 				<p className="text-sky-400 text-center text-xl mt-2">
@@ -37,7 +40,7 @@ const Services = (): JSX.Element => {
 					<ServiceCard key={project.title} {...project} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

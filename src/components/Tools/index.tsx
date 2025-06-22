@@ -26,7 +26,10 @@ const tools = [
 
 const Tools = (): JSX.Element => {
 	return (
-		<div className="flex flex-col items-center p-10 max-w-[1200px] mx-auto relative m-10">
+		<section
+			id="tools"
+			className="flex flex-col items-center p-10 max-w-[1200px] mx-auto relative m-10"
+		>
 			<div className="absolute w-[800px] h-[400px] bg-sky-400 opacity-30 blur-[250px] rounded-full z-0 top-[25%] left-1/2 -translate-x-1/2" />
 
 			<div className="w-full text-center max-w-[600px] mb-10 z-10">
@@ -43,7 +46,7 @@ const Tools = (): JSX.Element => {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

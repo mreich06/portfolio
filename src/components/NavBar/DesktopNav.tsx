@@ -1,12 +1,20 @@
 import { NavLinkProps, NavItems } from './utils';
+import { Link } from 'react-scroll';
 
-const DesktopNavLink = ({ label, number }: NavLinkProps): JSX.Element => {
+const DesktopNavLink = ({ label, number, id }: NavLinkProps): JSX.Element => {
 	return (
 		<li>
-			<a href={`#${label.toLowerCase()}`} className="flex items-center space-x-1 group">
+			<Link
+				to={id}
+				spy={true}
+				smooth={true}
+				offset={-60}
+				duration={500}
+				className="flex items-center space-x-1 group cursor-pointer"
+			>
 				<span className="text-sky-400 font-mono text-xl">{number}</span>
 				<span className="text-white group-hover:text-sky-400 text-xl">{label}</span>
-			</a>
+			</Link>
 		</li>
 	);
 };
@@ -20,7 +28,12 @@ const DesktopNav = (): JSX.Element => {
 				</div>
 				<ul className="flex space-x-8">
 					{NavItems.map((item) => (
-						<DesktopNavLink number={item.number} label={item.label} />
+						<DesktopNavLink
+							key={item.id}
+							number={item.number}
+							label={item.label}
+							id={item.id}
+						/>
 					))}
 				</ul>
 			</div>

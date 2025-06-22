@@ -1,5 +1,5 @@
 import ProfilePic from '../../assets/photos/portfolio-pic.svg';
-import LinkedInIcon from '../../assets/photos/linkedin-icon.svg';
+import { Socials, socialsList } from '.';
 
 const DesktopHero = (): JSX.Element => {
 	return (
@@ -17,36 +17,7 @@ const DesktopHero = (): JSX.Element => {
 							in <span className="text-sky-400">Tokyo.</span>
 						</p>
 					</div>
-					<div className="flex gap-7 my-10">
-						<a
-							href="https://www.linkedin.com/in/maya-reich/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12" />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/maya-reich/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12" />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/maya-reich/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12" />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/maya-reich/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12" />
-						</a>
-					</div>
+					<Socials icons={socialsList} />
 					<div className="flex space-x-4">
 						<button className="primary-button">Download CV</button>
 						<button className="secondary-button">Say Hi</button>
