@@ -3,7 +3,7 @@ import PlaceholderPic from '../../assets/photos/placeholder-image.png';
 const About = (): JSX.Element => {
 	return (
 		<div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-8 lg:px-12 header-container relative">
-			<div className="absolute w-[900px] h-[900px] bg-sky-400 opacity-30 blur-[300px] rounded-full z-0 top-[-40%] left-[50%]" />
+			{/* <div className="absolute w-[900px] h-[900px] bg-sky-400 opacity-30 blur-[300px] rounded-full z-0 top-[-40%] left-[50%]" /> */}
 
 			<div className="w-full max-w-[1800px] flex flex-col md:flex-row gap-8 relative z-10">
 				<div className="flex-1 flex justify-center items-center">

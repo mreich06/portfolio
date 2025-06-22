@@ -4,9 +4,10 @@ export interface NavLinkProps {
 }
 
 export const NavItems = [
-	{ number: '01.', label: 'About' },
-	{ number: '02.', label: 'Tools' },
-	{ number: '03.', label: 'Experience' },
-	{ number: '04.', label: 'Project' },
-	{ number: '05.', label: 'Contact' },
+	{ number: '01.', label: 'My Services' },
+	{ number: '02.', label: 'About Me' },
+	{ number: '03.', label: 'Tools' },
+	{ number: '04.', label: 'Experience' },
+	{ number: '05.', label: 'Projects' },
+	{ number: '05.', label: 'Contact Me' },
 ];

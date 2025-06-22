@@ -1,4 +1,4 @@
-import ProfilePic from '../../assets/photos/profile-pic.png';
+import ProfilePic from '../../assets/photos/portfolio-pic.svg';
 
 const MobileHero = (): JSX.Element => {
 	return (

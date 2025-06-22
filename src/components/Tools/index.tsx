@@ -1,5 +1,28 @@
-import { TechStack } from '../../data/techStack';
-import ToolsSection from './ToolsSection';
+import FigmaIcon from '../../assets/svgs/figma-icon.svg';
+import ReactIcon from '../../assets/svgs/react-icon.svg';
+import NodeJsIcon from '../../assets/svgs/nodejs-icon.svg';
+import NextJsIcon from '../../assets/svgs/nextjs-icon.svg';
+import SassIcon from '../../assets/svgs/sass-icon.svg';
+import TsIcon from '../../assets/svgs/ts-icon.svg';
+import TailwindIcon from '../../assets/svgs/tailwind-icon.svg';
+import StorybookIcon from '../../assets/svgs/storybook-icon.svg'; // or placeholder
+
+const tools = [
+	{ name: 'React', icon: ReactIcon },
+	{ name: 'Next.js', icon: NextJsIcon },
+	{ name: 'Node.js', icon: NodeJsIcon },
+	{ name: 'TypeScript', icon: TsIcon },
+	{ name: 'Sass/SCSS', icon: SassIcon },
+	{ name: 'TailwindCSS', icon: TailwindIcon },
+	{ name: 'Figma', icon: FigmaIcon },
+	{ name: 'StorybookIcon', icon: StorybookIcon },
+	{ name: 'Sass/SCSS', icon: SassIcon },
+	{ name: 'TailwindCSS', icon: TailwindIcon },
+	{ name: 'Figma', icon: FigmaIcon },
+	{ name: 'StorybookIcon', icon: StorybookIcon },
+	{ name: 'Figma', icon: FigmaIcon },
+	{ name: 'StorybookIcon', icon: StorybookIcon },
+];
 
 const Tools = (): JSX.Element => {
 	return (
@@ -8,14 +31,16 @@ const Tools = (): JSX.Element => {
 
 			<div className="w-full text-center max-w-[600px] mb-10 z-10">
 				<h1 className="section-text mt-17">My Full Stack Tool Belt</h1>
-				<p className="description mt-2">
+				<p className="description-highlight mt-2 mb-5">
 					The tools I've been using over the past 4 years
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1200px] mx-auto z-10">
-				{TechStack.map((section) => (
-					<ToolsSection key={section.title} name={section.title} tools={section.tools} />
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-10 z-10">
+				{tools.map(({ name, icon }) => (
+					<div key={name} className="flex flex-col items-center text-center">
+						<img src={icon} alt={name} className="w-20 h-20 mb-3" />
+					</div>
 				))}
 			</div>
 		</div>

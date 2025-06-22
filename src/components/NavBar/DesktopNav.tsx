@@ -14,9 +14,9 @@ const DesktopNavLink = ({ label, number }: NavLinkProps): JSX.Element => {
 const DesktopNav = (): JSX.Element => {
 	return (
 		<div className="hidden md:block">
-			<div className="mx-auto flex items-center justify-between px-6 py-4">
-				<div className="text-4xl font-bold cursor-pointer">
-					<h1>MR</h1>
+			<div className="mx-auto flex items-center justify-between p-7">
+				<div className="text-4xl cursor-pointer">
+					<h1>Maya Reich</h1>
 				</div>
 				<ul className="flex space-x-8">
 					{NavItems.map((item) => (

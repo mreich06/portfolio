@@ -1,0 +1,51 @@
+import LinkedInIcon from '../../assets/photos/linkedin-icon.svg';
+
+const Footer = () => {
+	return (
+		<footer className="text-center py-12 text-white space-y-6">
+			<h3 className="text-xl font-bold text-sky-400">Maya Reich</h3>
+
+			<div className="flex justify-center gap-6">
+				<a
+					href="https://www.linkedin.com/in/maya-reich/e"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={LinkedInIcon} alt="LinkedIn" className="w-10 h-10" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/maya-reich/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={LinkedInIcon} alt="LinkedIn" className="w-10 h-10" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/maya-reich/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={LinkedInIcon} alt="LinkedIn" className="w-10 h-10" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/maya-reich/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={LinkedInIcon} alt="LinkedIn" className="w-10 h-10" />
+				</a>
+			</div>
+
+			<div className="flex justify-center gap-4 flex-wrap text-sm text-gray-400">
+				<p>📧 mayareich0604@gmail.com</p>
+				<p>📞 +1 (859) 814-4719</p>
+			</div>
+
+			<p className="text-xs text-gray-600">
+				Designed for international front-end & full stack job applications
+			</p>
+		</footer>
+	);
+};
+
+export default Footer;

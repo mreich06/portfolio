@@ -1,5 +1,3 @@
-import React from 'react';
-
 type ProjectCardProps = {
 	title: string;
 	description: string;
@@ -8,7 +6,7 @@ type ProjectCardProps = {
 	link: string;
 };
 
-const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, tags }: ProjectCardProps) => {
 	return (
 		<div className="p-6 rounded-xl overflow-hidden border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2 hover:scale-[1.02] transition-all">
 			<img src={image} alt={title} className="w-full h-70 object-cover rounded-xl" />
