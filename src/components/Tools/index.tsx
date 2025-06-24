@@ -39,10 +39,14 @@ const Tools = (): JSX.Element => {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-10 z-10">
+			<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 gap-6 sm:gap-10 z-10">
 				{tools.map(({ name, icon }) => (
 					<div key={name} className="flex flex-col items-center text-center">
-						<img src={icon} alt={name} className="w-20 h-20 mb-3" />
+						<img
+							src={icon}
+							alt={name}
+							className="w-14 h-14 sm:w-14 sm:h-14 md:w-20 md:h-20 mb-3"
+						/>
 					</div>
 				))}
 			</div>
