@@ -2,6 +2,7 @@ html,
 body {
 	background-color: black;
 	height: 2000px;
+	overflow-x: hidden;
 }
 @import 'tailwindcss';
 
@@ -63,5 +64,9 @@ body {
 	.tools-section-header {
 		@apply text-xl 2xl:text-3xl;
 		@apply text-white;
+	}
+	.section-spacing {
+		@apply my-5 sm:my-10 md:my-40;
+		@apply px-6 sm:px-7 md:px-8;
 	}
 }

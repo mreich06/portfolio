@@ -3,7 +3,7 @@ import ContactSection from './components/ContactSection/ContactSection';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
 import Projects from './components/Projects/Projects';
 import Services from './components/Services/Services';
 import Tools from './components/Tools';
