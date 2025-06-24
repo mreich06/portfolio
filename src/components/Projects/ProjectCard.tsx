@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, image, tags }: ProjectCardProps) => {
 						</span>
 					))}
 				</div>
-				<p className="text-md text-gray-300">{description}</p>
+				<p className="description-white">{description}</p>
 
 				<div className="flex justify-start gap-4 mt-5">
 					<a

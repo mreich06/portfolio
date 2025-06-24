@@ -5,7 +5,14 @@ import NextJsIcon from '../../assets/svgs/nextjs-icon.svg';
 import SassIcon from '../../assets/svgs/sass-icon.svg';
 import TsIcon from '../../assets/svgs/ts-icon.svg';
 import TailwindIcon from '../../assets/svgs/tailwind-icon.svg';
-import StorybookIcon from '../../assets/svgs/storybook-icon.svg'; // or placeholder
+import StorybookIcon from '../../assets/svgs/storybook-icon.svg';
+import AwsIcon from '../../assets/svgs/aws-icon.svg';
+import JenkinsIcon from '../../assets/svgs/jenkins-icon.svg';
+import GrapqlIcon from '../../assets/svgs/graphql-icon.svg';
+import GithubIcon from '../../assets/svgs/github-white-icon.svg';
+import ReduxIcon from '../../assets/svgs/redux-icon.svg';
+import KubernetesIcon from '../../assets/svgs/kubernetes-icon.svg';
+import DockerIcon from '../../assets/svgs/docker-icon.svg';
 
 const tools = [
 	{ name: 'React', icon: ReactIcon },
@@ -13,15 +20,16 @@ const tools = [
 	{ name: 'Node.js', icon: NodeJsIcon },
 	{ name: 'TypeScript', icon: TsIcon },
 	{ name: 'Sass/SCSS', icon: SassIcon },
+	{ name: 'TailwindCSS', icon: JenkinsIcon },
+	{ name: 'Figma', icon: FigmaIcon },
+	{ name: 'Storybook', icon: StorybookIcon },
+	{ name: 'Kubernetes', icon: KubernetesIcon },
 	{ name: 'TailwindCSS', icon: TailwindIcon },
-	{ name: 'Figma', icon: FigmaIcon },
-	{ name: 'StorybookIcon', icon: StorybookIcon },
-	{ name: 'Sass/SCSS', icon: SassIcon },
-	{ name: 'TailwindCSS', icon: TailwindIcon },
-	{ name: 'Figma', icon: FigmaIcon },
-	{ name: 'StorybookIcon', icon: StorybookIcon },
-	{ name: 'Figma', icon: FigmaIcon },
-	{ name: 'StorybookIcon', icon: StorybookIcon },
+	{ name: 'Redux', icon: ReduxIcon },
+	{ name: 'GrapQL', icon: GrapqlIcon },
+	{ name: 'Docker', icon: DockerIcon },
+	{ name: 'Aws', icon: AwsIcon },
+	{ name: 'GitHub', icon: GithubIcon },
 ];
 
 const Tools = (): JSX.Element => {
@@ -39,14 +47,16 @@ const Tools = (): JSX.Element => {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 gap-6 sm:gap-10 z-10">
+			<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 gap-6 sm:gap-10 z-10">
 				{tools.map(({ name, icon }) => (
 					<div key={name} className="flex flex-col items-center text-center">
 						<img
 							src={icon}
 							alt={name}
-							className="w-14 h-14 sm:w-14 sm:h-14 md:w-20 md:h-20 mb-3"
+							className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-1 object-contain"
 						/>
+
+						<p className="text-[10px] text-gray-400 mt-1">{name}</p>
 					</div>
 				))}
 			</div>

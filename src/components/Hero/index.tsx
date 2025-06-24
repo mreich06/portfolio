@@ -2,7 +2,7 @@ import DesktopHero from './DesktopHero';
 import MobileHero from './MobileHero';
 import LinkedInIcon from '../../assets/svgs/linkedin-icon.svg';
 import GithubIcon from '../../assets/svgs/github-icon.svg';
-import FigmaIcon from '../../assets/svgs/figma-icon.svg';
+import FigmaIcon from '../../assets/svgs/figma-icon-socials.svg';
 
 export interface SocialItem {
 	svg: string;
@@ -28,18 +28,23 @@ export const socialsList: SocialItem[] = [
 	},
 ];
 
-export const Socials = ({ icons }: { icons: SocialItem[] }) => {
+export const Socials = ({
+	icons,
+	className = '',
+}: {
+	icons: SocialItem[];
+	className?: string;
+}) => {
 	return (
-		<div className="flex justify-center items-center gap-5 md:gap-7">
+		<div className={`flex gap-5 md:gap-7 my-10 ${className}`}>
 			{icons.map((icon) => (
 				<a key={icon.link} href={icon.link} target="_blank" rel="noopener noreferrer">
-					<img src={icon.svg} alt={icon.alt} className="w-8 h-8 md:w-10 md:h-10" />
+					<img src={icon.svg} alt={icon.alt} className="w-8 h-8 md:w-12 md:h-12" />
 				</a>
 			))}
 		</div>
 	);
 };
-
 const Hero = () => {
 	return (
 		<div className="p-6 md:p-20">
