@@ -1,10 +1,10 @@
 import { Socials, socialsList } from '.';
-import ProfilePic from '../../assets/photos/portfolio-pic.svg';
+import ProfilePic from '../../assets/svgs/portfolio-pic.svg';
 
 const MobileHero = (): JSX.Element => {
 	return (
 		<div className="overflow-hidden">
-			<div className="flex flex-col gap-6 md:hidden relative px-4 pt-10">
+			<div className="flex flex-col gap-6 md:hidden relative mt-12">
 				<div className="absolute w-[300px] h-[300px] bg-sky-400 opacity-20 blur-[100px] rounded-full z-0 top-0 left-1/2 -translate-x-1/2" />
 				<div className="w-full justify-center align-center relative z-10">
 					<p className="text-sky-400 text-center description mb-4">Hi there,</p>
@@ -25,7 +25,7 @@ const MobileHero = (): JSX.Element => {
 						<span className="text-sky-400"> Tokyo.</span>
 					</p>
 				</div>
-				<div className="flex justify-center items-center h-[50px] relative z-10">
+				<div className="flex justify-center items-center relative z-10">
 					<Socials icons={socialsList} />
 				</div>
 

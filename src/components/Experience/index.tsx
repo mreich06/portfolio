@@ -41,9 +41,9 @@ const experiences = [
 
 const Experience = () => {
 	return (
-		<section id="experience" className="section-spacing px-6">
+		<section id="experience" className="section-spacing">
 			<div className="max-w-5xl mx-auto">
-				<h2 className="text-3xl font-bold text-white text-center mb-12">Experience</h2>
+				<h2 className="section-text text-center section-header-spacing">Experience</h2>
 
 				<div className="flex flex-col gap-8">
 					{experiences.map((exp, i) => (

@@ -36,7 +36,7 @@ export const Socials = ({
 	className?: string;
 }) => {
 	return (
-		<div className={`flex gap-5 md:gap-7 my-10 ${className}`}>
+		<div className={`flex gap-5 md:gap-7 ${className}`}>
 			{icons.map((icon) => (
 				<a key={icon.link} href={icon.link} target="_blank" rel="noopener noreferrer">
 					<img src={icon.svg} alt={icon.alt} className="w-8 h-8 md:w-12 md:h-12" />
@@ -47,7 +47,7 @@ export const Socials = ({
 };
 const Hero = () => {
 	return (
-		<div className="p-6 md:p-20">
+		<div className="section-spacing">
 			<DesktopHero />
 			<MobileHero />
 		</div>
