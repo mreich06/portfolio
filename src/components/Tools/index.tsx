@@ -36,11 +36,11 @@ const Tools = (): JSX.Element => {
 	return (
 		<section
 			id="tools"
-			className="flex flex-col items-center p-10 max-w-[1200px] mx-auto relative m-10 scroll-mt-20"
+			className="flex flex-col items-center max-w-[1200px] mx-auto relative section-spacing scroll-mt-20"
 		>
 			<div className="absolute w-[800px] h-[400px] bg-sky-400 opacity-30 blur-[250px] rounded-full z-0 top-[25%] left-1/2 -translate-x-1/2" />
 
-			<div className="w-full text-center max-w-[600px] mb-10 z-10">
+			<div className="pt-10 w-full text-center max-w-[600px] mb-10 z-10">
 				<h1 className="section-text">My Full Stack Tool Belt</h1>
 				<p className="description-highlight mt-2 mb-5">
 					The tools I've been using over the past 4 years

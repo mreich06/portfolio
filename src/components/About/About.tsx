@@ -7,7 +7,7 @@ const About = (): JSX.Element => {
 				<div className="flex-1 flex justify-center">
 					<img
 						src={Avatar}
-						className="w-full max-w-[300px] sm:max-w-[350px] xl:max-w-[420px] h-auto"
+						className="max-w-[300px] sm:max-w-[350px] xl:max-w-[420px] h-auto object-contain"
 						alt="Profile picture"
 					/>
 				</div>

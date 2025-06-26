@@ -40,7 +40,7 @@ const ProjectsSection = () => {
 			<p className="text-center description-highlight section-header-spacing">
 				The projects I have developed in my free time
 			</p>
-			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
 				{projects.map((project) => (
 					<ProjectCard key={project.title} {...project} />
 				))}

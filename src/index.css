@@ -26,7 +26,7 @@ body {
 @layer utilities {
 	.section-spacing {
 		@apply py-5 sm:py-10 md:py-15 lg:py-20;
-		@apply px-10 sm:px-7 md:px-8 lg:px-20;
+		@apply px-5 sm:px-7 md:px-8 lg:px-20;
 	}
 	.header {
 		@apply text-2xl/5 sm:text-3xl/7 md:text-4xl lg:text-5xl xl:text-6xl;
@@ -36,10 +36,10 @@ body {
 		@apply text-xl sm:text-xl/8 md:text-2xl/10 lg:text-3xl/12 xl:text-4xl/14;
 	}
 	.section-header-spacing {
-		@apply mb-7 lg:mb-10 xl:mb-12;
+		@apply mb-5 md:mb-7 lg:mb-10 xl:mb-12;
 	}
 	.input {
-		@apply w-full p-4 rounded-md bg-white/5 border border-white/10 text-white;
+		@apply w-full p-3 md:p-4 rounded-md bg-white/5 border border-white/10 text-white text-sm md:text-base;
 	}
 	.description {
 		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;

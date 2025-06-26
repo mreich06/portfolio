@@ -49,7 +49,7 @@ const Experience = () => {
 					{experiences.map((exp, i) => (
 						<div
 							key={i}
-							className="p-6 md:p-8 rounded-xl border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2"
+							className="pt-1 pb-4 px-4 md:px-8 md:py-8 rounded-xl border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2"
 						>
 							<div className="flex flex-col md:grid md:grid-cols-[auto_1fr_auto] gap-4 md:gap-6 items-start">
 								{/* Logo */}

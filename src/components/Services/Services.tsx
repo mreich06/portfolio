@@ -25,14 +25,14 @@ const projects = [
 const Services = (): JSX.Element => {
 	return (
 		<section id="my-services" className="section-spacing max-w-[1200px] mx-auto">
-			<div className="text-center max-w-[700px] mx-auto mb-10">
+			<div className="pt-10 text-center max-w-[700px] mx-auto mb-10">
 				<h1 className="section-text">My Services</h1>
 				<p className="description-highlight mt-2">
 					Full-stack development, clean design, and scalable solutions
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-3  gap-4 md:gap-8">
 				{projects.map((project) => (
 					<ServiceCard key={project.title} {...project} />
 				))}
