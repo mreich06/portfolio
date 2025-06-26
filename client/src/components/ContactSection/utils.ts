@@ -3,7 +3,7 @@ export const handleSubmit = async (formData: {
 	email: string;
 	title: string;
 	message: string;
-}) => {
+}): Promise<boolean> => {
 	try {
 		const res = await fetch('http://localhost:5000/api/contact', {
 			method: 'POST',
@@ -15,11 +15,14 @@ export const handleSubmit = async (formData: {
 
 		if (res.ok) {
 			alert('Message sent successfully');
+			return true;
 		} else {
 			alert('Failed to send message.');
+			return false;
 		}
 	} catch (err) {
 		console.error('Error:', err);
 		alert('Something went wrong.');
+		return false;
 	}
 };

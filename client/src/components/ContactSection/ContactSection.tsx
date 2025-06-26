@@ -15,9 +15,12 @@ const ContactSection = () => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const onSubmit = (e: React.FormEvent) => {
+	const onSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		handleSubmit(formData);
+		const success = await handleSubmit(formData);
+		if (success) {
+			setFormData({ name: '', email: '', message: '', title: '' }); // clear form
+		}
 	};
 
 	return (
@@ -31,6 +34,7 @@ const ContactSection = () => {
 				<div className="md:col-span-2 flex flex-col space-y-3 md:space-y-6">
 					<input
 						type="text"
+						name="name"
 						placeholder="Name"
 						className="input"
 						value={name}
@@ -38,6 +42,7 @@ const ContactSection = () => {
 					/>
 					<input
 						type="email"
+						name="email"
 						placeholder="Email"
 						className="input"
 						value={email}
@@ -45,6 +50,7 @@ const ContactSection = () => {
 					/>
 					<input
 						type="text"
+						name="title"
 						placeholder="Message Title"
 						className="input"
 						value={title}
@@ -54,6 +60,7 @@ const ContactSection = () => {
 
 				<div className="md:col-span-3 flex flex-col">
 					<textarea
+						name="message"
 						placeholder="Message"
 						className="text-sm md:text-base w-full p-3 h-full min-h-[180px] md:min-h-[280px] rounded-md bg-white/5 border border-white/10 text-white"
 						value={message}
