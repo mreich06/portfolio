@@ -1,26 +1,37 @@
 import { NavLinkProps, NavItems } from './utils';
+import { Link } from 'react-scroll';
 
-const DesktopNavLink = ({ label, number }: NavLinkProps): JSX.Element => {
+const DesktopNavLink = ({ label, number, id }: NavLinkProps): JSX.Element => {
 	return (
 		<li>
-			<a href={`#${label.toLowerCase()}`} className="flex items-center space-x-1 group">
-				<span className="text-green-400 font-mono">{number}</span>
-				<span className="text-white group-hover:text-green-400">{label}</span>
-			</a>
+			<Link
+				to={id}
+				spy={true}
+				smooth={true}
+				offset={-60}
+				duration={500}
+				className="flex items-center space-x-1 cursor-pointer"
+			>
+				<span className="text-sky-400 font-mono text-sm lg:text-xl">{number}</span>
+				<span className="text-white hover:text-sky-400 text-sm lg:text-xl">{label}</span>
+			</Link>
 		</li>
 	);
 };
 
 const DesktopNav = (): JSX.Element => {
 	return (
-		<div className="hidden md:block">
-			<div className="mx-auto flex items-center justify-between px-6 py-4">
-				<div className="text-lg font-bold cursor-pointer">
-					<h1>MR</h1>
-				</div>
-				<ul className="flex space-x-8">
+		<div className="hidden md:block px-4">
+			<div className="mx-auto flex items-center justify-between px-3 py-7">
+				<h1 className="text-xl lg:text-2xl cursor-pointer">Maya Reich</h1>
+				<ul className="flex space-x-6">
 					{NavItems.map((item) => (
-						<DesktopNavLink number={item.number} label={item.label} />
+						<DesktopNavLink
+							key={item.id}
+							number={item.number}
+							label={item.label}
+							id={item.id}
+						/>
 					))}
 				</ul>
 			</div>
