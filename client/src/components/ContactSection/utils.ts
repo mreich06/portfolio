@@ -5,7 +5,7 @@ export const handleSubmit = async (formData: {
 	message: string;
 }): Promise<boolean> => {
 	try {
-		const res = await fetch('http://localhost:5000/api/contact', {
+		const res = await fetch('http://localhost:5050/api/contact', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

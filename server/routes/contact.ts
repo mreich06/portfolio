@@ -1,10 +1,11 @@
 import express, { Request, Response } from 'express';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const router = express.Router();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post('/contact', async (req: Request, res: Response): Promise<void> => {
 	const { name, email, message } = req.body;
@@ -15,19 +16,13 @@ router.post('/contact', async (req: Request, res: Response): Promise<void> => {
 	}
 
 	try {
-		const transporter = nodemailer.createTransport({
-			service: 'gmail',
-			auth: {
-				user: process.env.EMAIL_USER,
-				pass: process.env.EMAIL_PASS,
-			},
-		});
-
-		await transporter.sendMail({
-			from: `"${name}" <${email}>`,
-			to: process.env.EMAIL_TO,
+		await resend.emails.send({
+			from: 'Your Name <your@yourdomain.com>',
+			to: [process.env.EMAIL_TO!],
 			subject: `Portfolio Contact Form Message from ${name}`,
-			text: message,
+			html: `<p><strong>Name:</strong> ${name}</p>
+			       <p><strong>Email:</strong> ${email}</p>
+			       <p><strong>Message:</strong><br>${message}</p>`,
 		});
 
 		res.status(200).json({ success: true });
