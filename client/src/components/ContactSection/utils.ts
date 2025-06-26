@@ -1,3 +1,5 @@
+import toast from 'react-hot-toast';
+
 export const handleSubmit = async (formData: {
 	name: string;
 	email: string;
@@ -14,15 +16,15 @@ export const handleSubmit = async (formData: {
 		});
 
 		if (res.ok) {
-			alert('Message sent successfully');
+			toast.success('Message sent successfully. I will be in touch soon!');
 			return true;
 		} else {
-			alert('Failed to send message.');
+			toast.error('Failed to send message. Please try again.');
 			return false;
 		}
 	} catch (err) {
 		console.error('Error:', err);
-		alert('Something went wrong.');
+		toast.error('Something went wrong.');
 		return false;
 	}
 };
