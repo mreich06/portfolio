@@ -21,7 +21,7 @@ const MobileHero = (): JSX.Element => {
 				<div className="text-center relative z-10">
 					<p className="text-gray-400 text-center description inline m-0 p-0">
 						I create <span className="text-sky-400">user-focused</span> applications that
-						combine functionality with clean, modern design. I am currently living in
+						combine functionality with clean, modern design. I am currently living in{' '}
 						<span className="text-sky-400"> Tokyo.</span>
 					</p>
 				</div>

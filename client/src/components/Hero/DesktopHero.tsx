@@ -11,7 +11,7 @@ const DesktopHero = (): JSX.Element => {
 					<p className="text-sky-400 header header-margin">Full Stack Developer</p>
 					<p className="description text-gray-300">
 						I create <span className="text-sky-400">user-focused</span> applications that
-						combine functionality with clean, modern design. I am currently living in
+						combine functionality with clean, modern design. I am currently living in{' '}
 						<span className="text-sky-400">Tokyo.</span>
 					</p>
 					<Socials icons={socialsList} className="my-10" />
