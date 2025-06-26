@@ -7,10 +7,12 @@ import NavBar from './components/NavBar';
 import Projects from './components/Projects/Projects';
 import Services from './components/Services/Services';
 import Tools from './components/Tools';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 	return (
 		<div className="flex flex-col">
+			<Toaster position="top-right" />
 			<NavBar />
 			<Hero />
 			<Services />
