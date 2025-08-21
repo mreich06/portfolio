@@ -7,11 +7,13 @@ export const handleSubmit = async (formData: {
 	message: string;
 }): Promise<boolean> => {
 	try {
-		const res = await fetch('http://localhost:5050/api/contact', {
+		const base = import.meta.env.DEV
+			? 'http://localhost:5050'
+			: import.meta.env.VITE_API_BASE;
+
+		const res = await fetch(`${base}/api/contact`, {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
+			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(formData),
 		});
 
