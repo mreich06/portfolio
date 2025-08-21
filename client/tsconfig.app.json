@@ -20,9 +20,7 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"noUncheckedSideEffectImports": true,
-
-		"types": ["vite/client"]
+		"noUncheckedSideEffectImports": true
 	},
-	"include": ["client/src", "client/vite-env.d.ts"]
+	"include": ["src", "vite-env.d.ts"]
 }
