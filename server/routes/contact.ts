@@ -17,7 +17,7 @@ router.post('/contact', async (req: Request, res: Response): Promise<void> => {
 
 	try {
 		await resend.emails.send({
-			from: 'Maya Reich <maya@mayareich.dev>',
+			from: 'Maya Reich <hello@mayareich.dev>',
 			to: [process.env.EMAIL_TO!],
 			subject: `Portfolio Contact Form Message from ${name}`,
 			html: `<p><strong>Name:</strong> ${name}</p>
