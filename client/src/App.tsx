@@ -1,11 +1,11 @@
-import About from './components/About/About';
-import ContactSection from './components/ContactSection/ContactSection';
+import About from './components/About';
+import ContactSection from './components/ContactSection';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
-import Projects from './components/Projects/Projects';
-import Services from './components/Services/Services';
+import Projects from './components/Projects';
+import Services from './components/Services';
 import Tools from './components/Tools';
 import { Toaster } from 'react-hot-toast';
 

@@ -3,6 +3,7 @@ import MobileHero from './MobileHero';
 import LinkedInIcon from '../../assets/svgs/linkedin-icon.svg';
 import GithubIcon from '../../assets/svgs/github-icon.svg';
 import FigmaIcon from '../../assets/svgs/figma-icon-socials.svg';
+import FadeUpAnimation from '../Animation/FadeUpAnimation';
 
 export interface SocialItem {
 	svg: string;
@@ -47,10 +48,12 @@ export const Socials = ({
 };
 const Hero = () => {
 	return (
-		<div className="section-spacing">
-			<DesktopHero />
-			<MobileHero />
-		</div>
+		<FadeUpAnimation>
+			<div className="section-spacing">
+				<DesktopHero />
+				<MobileHero />
+			</div>
+		</FadeUpAnimation>
 	);
 };
 

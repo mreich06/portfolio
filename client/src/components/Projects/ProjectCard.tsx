@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps
 		<div className="p-3 md:p-6 rounded-xl overflow-hidden border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2 hover:scale-[1.02] transition-all">
 			<img src={image} alt={title} className="w-full h-70 object-cover rounded-xl" />
 			<div className="p-3 md:p-5 space-y-5">
-				<h3 className="text-2xl font-semibold text-white">{title}</h3>
+				<h3 className="project-title font-semibold text-white">{title}</h3>
 				<div className="flex flex-wrap gap-2 mt-3">
 					{tags.map((tag) => (
 						<span

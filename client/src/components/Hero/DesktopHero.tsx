@@ -12,7 +12,7 @@ const DesktopHero = (): JSX.Element => {
 					<p className="description text-gray-300">
 						I create <span className="text-sky-400">user-focused</span> applications that
 						combine functionality with clean, modern design. I am currently living in{' '}
-						<span className="text-sky-400">Tokyo.</span>
+						<span className="text-sky-400">Leipzig, Germany.</span>
 					</p>
 					<Socials icons={socialsList} className="my-10" />
 					<div className="flex space-x-4">
