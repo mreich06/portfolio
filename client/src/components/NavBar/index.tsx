@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
+import NavBarAnimation from '../Animation/NavBarAnimation';
 
 const NavBar = (): JSX.Element => {
 	const [isOpen, setIsOpen] = useState(false);

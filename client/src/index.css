@@ -42,11 +42,11 @@ body {
 		@apply w-full p-3 md:p-4 rounded-md bg-white/5 border border-white/10 text-white text-sm md:text-base;
 	}
 	.description {
-		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-xl/10;
 		@apply text-gray-400;
 	}
 	.description-highlight {
-		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-2xl/10;
+		@apply text-sm/6 sm:text-sm/6 md:text-base/8 lg:text-xl/10 xl:text-xl/10;
 		@apply text-sky-400;
 	}
 	.header-margin {
@@ -77,5 +77,8 @@ body {
 	}
 	.description-white {
 		@apply text-sm md:text-base text-gray-300;
+	}
+	.project-title {
+		@apply text-base/6 sm:text-base/6 md:text-base/8 lg:text-xl/10 xl:text-xl/10;
 	}
 }
