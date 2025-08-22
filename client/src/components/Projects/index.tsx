@@ -12,7 +12,7 @@ const projects = [
 		image: SpotifyDashboardImage,
 		tags: ['React', 'Tailwind', 'TypeScript', 'Redux', 'Next.js'],
 		link: 'https://github.com/mreich06/spotify-dashboard',
-		website: 'https://github.com/mreich06/spotify-dashboard',
+		github: 'https://github.com/mreich06/spotify-dashboard',
 	},
 	{
 		title: 'Visa/Work Tools Website',
@@ -20,8 +20,8 @@ const projects = [
 			'An AI-powered platform that uses smart automation and web scraping to deliver personalized visa recommendations, job listings, and relocation guides tailored to your citizenship and goals.',
 		image: VisaWebsiteImage,
 		tags: ['React', 'Redux', 'Node.js', 'OpenAI'],
-		link: 'https://github.com/mreich06',
-		website: 'https://github.com/mreich06',
+		link: 'https://www.figma.com/design/d9AXM5TQ2PVZUFqjDNkBIe/Move-Abroad-Website?node-id=0-1&p=f&t=fQbiHoG2E3TYB6DJ-0',
+		github: 'https://github.com/mreich06',
 	},
 	{
 		title: 'Web Development Portfolio',
@@ -29,8 +29,8 @@ const projects = [
 			'A sleek, responsive portfolio showcasing my work experience and focused on clean design and user experience.',
 		image: PortfolioProjectImage,
 		tags: ['React', 'Tailwind', 'TypeScript', 'Render', 'Vercel', 'Cloudflare'],
-		link: 'https://github.com/mreich06/portfolio',
-		website: 'https://github.com/mreich06/portfolio',
+		link: 'https://mayareich.dev',
+		github: 'https://github.com/mreich06/portfolio',
 	},
 ];
 

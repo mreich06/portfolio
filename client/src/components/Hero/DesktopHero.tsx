@@ -16,8 +16,13 @@ const DesktopHero = (): JSX.Element => {
 					</p>
 					<Socials icons={socialsList} className="my-10" />
 					<div className="flex space-x-4">
-						<button className="primary-button">Download CV</button>
-						<button className="secondary-button">Say Hi</button>
+						<a href="/maya-reich-resume.pdf" download className="primary-button">
+							Download CV
+						</a>
+
+						<a href="#contact" className="secondary-button">
+							Say Hi
+						</a>
 					</div>
 				</div>
 				<div className="flex-1 flex justify-center items-center">
