@@ -1,11 +1,10 @@
-// NavBarAnimation.tsx
 import { motion, MotionConfig } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 type Props = { children: React.ReactNode };
 
 export default function NavBarAnimation({ children }: Props) {
-	// ensure it animates AFTER first paint (prevents hydration/SSR quirks)
+	// render also after first paint by using state
 	const [ready, setReady] = useState(false);
 	useEffect(() => setReady(true), []);
 
