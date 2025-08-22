@@ -4,9 +4,17 @@ type ProjectCardProps = {
 	image: string;
 	tags: string[];
 	link: string;
+	github: string;
 };
 
-const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps) => {
+const ProjectCard = ({
+	title,
+	description,
+	image,
+	tags,
+	link,
+	github,
+}: ProjectCardProps) => {
 	return (
 		<div className="p-3 md:p-6 rounded-xl overflow-hidden border border-white/10 backdrop-blur-md bg-gradient-to-br from-white/5 to-white/2 hover:scale-[1.02] transition-all">
 			<img src={image} alt={title} className="w-full h-70 object-cover rounded-xl" />
@@ -37,6 +45,7 @@ const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps
 						target="_blank"
 						rel="noopener noreferrer"
 						className="px-4 py-2 text-sm bg-gray-800 text-white rounded hover:bg-gray-700"
+						href={github}
 					>
 						GitHub
 					</a>
