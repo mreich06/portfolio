@@ -49,7 +49,7 @@ export const Socials = ({
 const Hero = () => {
 	return (
 		<FadeUpAnimation>
-			<div className="section-spacing">
+			<div className="hero-top-spacing">
 				<DesktopHero />
 				<MobileHero />
 			</div>

@@ -1,8 +1,8 @@
-import ProfilePic from '../../assets/svgs/portfolio-pic.svg';
+import ProfilePic from '../../assets/svgs/portfolio-pic.optimized.svg';
 import { Socials, socialsList } from '.';
 const DesktopHero = (): JSX.Element => {
 	return (
-		<div className="hidden md:flex justify-center items-center relative section-spacing xl:mt-10">
+		<div className="hidden md:flex justify-center items-center relative section-spacing xl:mt-0">
 			<div className="absolute w-[1000px] h-[600px] bg-sky-400 opacity-25 blur-[230px] rounded-full z-0 top-[-10%] left-[-10%]" />
 			<div className="w-full max-w-[1800px] flex gap-10 relative z-10">
 				<div className="flex-1 flex flex-col justify-center">

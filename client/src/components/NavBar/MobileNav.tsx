@@ -24,13 +24,13 @@ const NavBarSection = ({
 				to={id}
 				spy={true}
 				smooth={true}
-				offset={-60}
+				offset={-80}
 				duration={500}
 				onClick={onClick}
 				className="flex space-x-2 items-center cursor-pointer"
 			>
-				<span className="text-sky-400 font-monomaniac">{number}</span>
-				<span className="font-inter text-white">{label}</span>
+				<span className="text-sky-400 font-monomaniac text-lg">{number}</span>
+				<span className="font-inter text-white text-lg">{label}</span>
 			</Link>
 		</li>
 	);

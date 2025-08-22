@@ -22,9 +22,9 @@ const About = (): JSX.Element => {
 							Web and Mobile Software Engineer with 4 years of experience developing
 							enterprise applications. I am proficient in all aspects of the software
 							development life cycle including UI and architectural decisions, testing,
-							deployments, and maintenance. I am passionate about creating engaging,
-							intuitive, and responsive applications while continuously learning new
-							technologies. Check out my{' '}
+							deployments, and maintenance.
+							<br />
+							<br />I am passionate about creating engaging, intuitive, and responsive
 							<a
 								href="https://github.com/mreich06"
 								target="_blank"
