@@ -1,4 +1,4 @@
-import ProfilePic from '../../assets/svgs/portfolio-pic.optimized.svg';
+import ProfilePic from '../../assets/svgs/portfolio-pic.png';
 import { Socials, socialsList } from '.';
 const DesktopHero = (): JSX.Element => {
 	return (
