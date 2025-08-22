@@ -12,7 +12,9 @@ const NavBar = (): JSX.Element => {
 
 	return (
 		<nav className="text-white w-full">
-			<DesktopNav />
+			<NavBarAnimation>
+				<DesktopNav />
+			</NavBarAnimation>
 			<MobileNav isOpen={isOpen} onClose={handleToggle} />
 		</nav>
 	);

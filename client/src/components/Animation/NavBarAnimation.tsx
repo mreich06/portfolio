@@ -1,23 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-type Props = {
-	children: React.ReactNode;
-};
+type Props = { children: React.ReactNode };
 
-const NavBarAnimation = ({ children }: Props) => {
+export default function NavBarAnimation({ children }: Props) {
+	// render also after first paint by using state
+	const [ready, setReady] = useState(false);
+	useEffect(() => setReady(true), []);
+
 	return (
-		<motion.div
-			initial={{ opacity: 0, y: 80 }}
-			whileInView={{ opacity: 1, y: 0, scale: 1 }}
-			transition={{
-				duration: 1.6,
-				ease: [0.22, 1, 0.36, 1], // cubic-bezier easing
-			}}
-			viewport={{ once: true, amount: 0.3 }} // triggers when 30% in view
-		>
-			{children}
-		</motion.div>
+		<MotionConfig reducedMotion="never">
+			<motion.div
+				initial={{ opacity: 0, y: -20 }}
+				animate={ready ? { opacity: 1, y: 0 } : {}} // triggers once on refresh
+				transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
+			>
+				{children}
+			</motion.div>
+		</MotionConfig>
 	);
-};
-
-export default NavBarAnimation;
+}
