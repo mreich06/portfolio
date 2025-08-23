@@ -24,7 +24,8 @@ const About = (): JSX.Element => {
 							development life cycle including UI and architectural decisions, testing,
 							deployments, and maintenance.
 							<br />
-							<br />I am passionate about creating engaging, intuitive, and responsive{' '}
+							<br />I am passionate about creating engaging, intuitive, and responsive
+							applications while continuously learning new technologies. Check out my{' '}
 							<a
 								href="https://github.com/mreich06"
 								target="_blank"
