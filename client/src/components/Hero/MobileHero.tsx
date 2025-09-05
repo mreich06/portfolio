@@ -1,5 +1,5 @@
 import { Socials, socialsList } from '.';
-import ProfilePic from '../../assets/svgs/portfolio-pic.png';
+import ProfilePic from '../../assets/photos/portfolio-pic.webp';
 
 const MobileHero = (): JSX.Element => {
 	return (

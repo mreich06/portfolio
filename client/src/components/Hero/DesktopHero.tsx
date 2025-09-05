@@ -1,4 +1,4 @@
-import ProfilePic from '../../assets/svgs/portfolio-pic.png';
+import ProfilePic from '../../assets/photos/portfolio-pic.webp';
 import { Socials, socialsList } from '.';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
 const DesktopHero = (): JSX.Element => {
