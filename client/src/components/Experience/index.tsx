@@ -1,5 +1,5 @@
 import RakutenLogo from '../../assets/svgs/rakuten.svg';
-import ViasatLogo from '../../assets/photos/viasat.png';
+import ViasatLogo from '../../assets/photos/viasat.webp';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
 
 const experiences = [

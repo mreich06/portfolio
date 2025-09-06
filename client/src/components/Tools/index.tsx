@@ -1,5 +1,6 @@
 import FigmaIcon from '../../assets/svgs/figma-icon.svg';
 import ReactIcon from '../../assets/svgs/react-icon.svg';
+import ReactNativeIcon from '../../assets/svgs/react-native-app-icon.svg';
 import NodeJsIcon from '../../assets/svgs/nodejs-icon.svg';
 import NextJsIcon from '../../assets/svgs/nextjs-icon.svg';
 import SassIcon from '../../assets/svgs/sass-icon.svg';
@@ -17,6 +18,7 @@ import FadeUpAnimation from '../Animation/FadeUpAnimation';
 
 const tools = [
 	{ name: 'React', icon: ReactIcon },
+	{ name: 'React Native', icon: ReactNativeIcon },
 	{ name: 'Next.js', icon: NextJsIcon },
 	{ name: 'Node.js', icon: NodeJsIcon },
 	{ name: 'TypeScript', icon: TsIcon },

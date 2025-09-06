@@ -1,7 +1,7 @@
 import ProjectCard from './ProjectCard';
-import SpotifyDashboardImage from '../../assets/photos/spotify-project.png';
-import VisaWebsiteImage from '../../assets/photos/project-2.jpg';
-import PortfolioProjectImage from '../../assets/photos/portfolio-project.png';
+import SpotifyDashboardImage from '../../assets/photos/spotify-project.webp';
+import VisaWebsiteImage from '../../assets/photos/project-2.webp';
+import PortfolioProjectImage from '../../assets/photos/portfolio-project.webp';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
 
 const projects = [
