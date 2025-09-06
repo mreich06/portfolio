@@ -2,6 +2,7 @@ import ProfilePic from '../../assets/photos/portfolio-pic.webp';
 import { Socials, socialsList } from '.';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
 import FadeUpImage from '../Animation/FadeUpImage';
+import { TagLine, HeroButtons, HeroIntro } from './HeroShared';
 
 const DesktopHero = (): JSX.Element => {
 	return (
@@ -26,29 +27,15 @@ const DesktopHero = (): JSX.Element => {
 					filter: 'blur(60px)',
 				}}
 			/>
-
 			<div className="w-full max-w-[1800px] flex gap-10 relative z-10">
 				<FadeUpAnimation
 					wrapperClassName="basis-0 flex-1 min-w-0"
 					className="flex flex-col justify-center"
 				>
-					<p className="description mb-5 text-sky-400">Hi there,</p>
-					<p className="text-white header mb-4">I&apos;m Maya</p>
-					<p className="text-sky-400 header header-margin">Full Stack Developer</p>
-					<p className="description text-gray-300">
-						I create <span className="text-sky-400">user-focused</span> applications that
-						combine functionality with clean, modern design. I am currently living in{' '}
-						<span className="text-sky-400">Leipzig, Germany.</span>
-					</p>
+					<HeroIntro />
+					<p className="description">{TagLine}</p>
 					<Socials icons={socialsList} className="my-10" />
-					<div className="flex space-x-4">
-						<a href="/maya-reich-resume.pdf" download className="primary-button">
-							Download CV
-						</a>
-						<a href="#contact" className="secondary-button">
-							Say Hi
-						</a>
-					</div>
+					<HeroButtons center={false} />
 				</FadeUpAnimation>
 
 				<div className="flex-1 flex justify-center items-center">
