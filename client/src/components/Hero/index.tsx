@@ -3,6 +3,7 @@ import MobileHero from './MobileHero';
 import LinkedInIcon from '../../assets/svgs/linkedin-icon.svg';
 import GithubIcon from '../../assets/svgs/github-icon.svg';
 import FigmaIcon from '../../assets/svgs/figma-icon-socials.svg';
+import SmartImage from '../SmartImage';
 
 export interface SocialItem {
 	svg: string;
@@ -39,7 +40,7 @@ export const Socials = ({
 		<div className={`flex gap-5 md:gap-7 ${className}`}>
 			{icons.map((icon) => (
 				<a key={icon.link} href={icon.link} target="_blank" rel="noopener noreferrer">
-					<img src={icon.svg} alt={icon.alt} className="w-8 h-8 md:w-12 md:h-12" />
+					<SmartImage src={icon.svg} alt={icon.alt} className="w-8 h-8 md:w-12 md:h-12" />
 				</a>
 			))}
 		</div>

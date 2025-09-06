@@ -15,6 +15,7 @@ import ReduxIcon from '../../assets/svgs/redux-icon.svg';
 import KubernetesIcon from '../../assets/svgs/kubernetes-icon.svg';
 import DockerIcon from '../../assets/svgs/docker-icon.svg';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
+import SmartImage from '../SmartImage';
 
 const tools = [
 	{ name: 'React', icon: ReactIcon },
@@ -74,13 +75,11 @@ const Tools = (): JSX.Element => {
 				<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 gap-6 sm:gap-10 z-10">
 					{tools.map(({ name, icon }) => (
 						<div key={name} className="flex flex-col items-center text-center">
-							<img
+							<SmartImage
 								src={icon}
 								alt={name}
 								width={64}
 								height={64}
-								loading="lazy"
-								decoding="async"
 								className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-1 object-contain"
 							/>
 							<p className="text-[10px] text-gray-400 mt-1">{name}</p>
