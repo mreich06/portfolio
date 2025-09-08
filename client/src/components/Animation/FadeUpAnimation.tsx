@@ -2,17 +2,26 @@ import { motion } from 'framer-motion';
 
 type Props = {
 	children: React.ReactNode;
+	className?: string;
+	wrapperClassName?: string;
 };
 
-const FadeUpAnimation = ({ children }: Props) => {
-	// overflow hidden to fix double scroll bar issue
+export const fadeUp = {
+	initial: { opacity: 0, y: 40 },
+	animate: { opacity: 1, y: 0 },
+	transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] },
+	viewport: { once: true, amount: 0.2 },
+};
+
+const FadeUpAnimation = ({ children, className, wrapperClassName }: Props) => {
 	return (
-		<div style={{ overflow: 'hidden' }}>
+		<div className={['overflow-hidden', wrapperClassName].filter(Boolean).join(' ')}>
 			<motion.div
-				initial={{ opacity: 0, y: 40 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-				viewport={{ once: true, amount: 0.2 }}
+				className={className}
+				initial={fadeUp.initial}
+				whileInView={fadeUp.animate}
+				transition={fadeUp.transition as any}
+				viewport={fadeUp.viewport}
 			>
 				{children}
 			</motion.div>

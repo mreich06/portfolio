@@ -1,4 +1,4 @@
-import Avatar from '../../assets/photos/avatar.png';
+import Avatar from '../../assets/photos/avatar.webp';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
 
 const About = (): JSX.Element => {

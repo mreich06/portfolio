@@ -1,6 +1,7 @@
 import RakutenLogo from '../../assets/svgs/rakuten.svg';
-import ViasatLogo from '../../assets/photos/viasat.png';
+import ViasatLogo from '../../assets/photos/viasat.webp';
 import FadeUpAnimation from '../Animation/FadeUpAnimation';
+import SmartImage from '../SmartImage';
 
 const experiences = [
 	{
@@ -55,7 +56,7 @@ const Experience = () => {
 							>
 								<div className="flex flex-col md:grid md:grid-cols-[auto_1fr_auto] gap-4 md:gap-6 items-start">
 									{/* Logo */}
-									<img
+									<SmartImage
 										src={exp.logo}
 										alt={exp.company}
 										className="w-14 h-14 object-contain"
